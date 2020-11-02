@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace TechJobsOO
 {
     public class Job
@@ -40,15 +42,25 @@ namespace TechJobsOO
             return HashCode.Combine(Id);
         }
 
+        private string StringValidator(string item)
+        {
+            if (string.IsNullOrEmpty(item))
+            {
+                return "Data not available";
+            } else
+            {
+                return item;
+            }
+        }
         public override string ToString()
         {
             return "\n" +
                 "ID: " + this.Id +
-                "\nName: " + this.Name +
-                "\nEmployer: " + this.EmployerName +
-                "\nLocation: " + this.EmployerLocation +
-                "\nPosition Type: " + this.JobType + 
-                "\nCore Competency: " + this.JobCoreCompetency +
+                "\nName: " + StringValidator(Name) +
+                "\nEmployer: " + StringValidator(EmployerName.ToString()) +
+                "\nLocation: " + StringValidator(EmployerLocation.ToString()) +
+                "\nPosition Type: " + StringValidator(JobType.ToString()) +
+                "\nCore Competency: " + StringValidator(JobCoreCompetency.ToString()) +
                 "\n";
 
         }

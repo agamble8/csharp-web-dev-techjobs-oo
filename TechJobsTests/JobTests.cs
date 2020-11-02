@@ -80,5 +80,22 @@ namespace TechJobsTests
             Assert.IsTrue(stringTest[6].EndsWith("Persistence"));
         }
 
+        [TestMethod]
+        public void TestJobsToStringMethodFieldsEmpty()
+        {
+            Job job1 = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            string[] stringTest = job1.ToString().Split("\n");
+            Assert.IsTrue(stringTest[2].EndsWith("Data not available"));
+        }
+
+        //[TestMethod]
+        //public void TestJobsToStringMethodJobNull()
+        //{
+        //    Job job1 = new Job();
+        //    string stringTest = job1.ToString();
+        //    //Assert.IsTrue(stringTest == "OOPS! This job does not seem to exist.");
+        //    Assert.AreEqual(stringTest, "OOPS! This job does not seem to exist.");
+        //}
+
     }
 }
