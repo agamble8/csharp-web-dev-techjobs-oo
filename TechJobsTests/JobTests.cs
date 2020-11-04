@@ -93,8 +93,8 @@ namespace TechJobsTests
         //{
         //    Job job1 = new Job();
         //    string stringTest = job1.ToString();
-        //    //Assert.IsTrue(stringTest == "OOPS! This job does not seem to exist.");
-        //    Assert.AreEqual(stringTest, "OOPS! This job does not seem to exist.");
+        //    Assert.IsTrue(stringTest == "OOPS! This job does not seem to exist.");
+        //    //Assert.AreEqual(stringTest, "OOPS! This job does not seem to exist.");
         //}
 
     }
